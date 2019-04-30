@@ -16,7 +16,36 @@ public static int[][] ticbox;
 		
 		
 		
-		//write your code here !!!
+		for(int i = 0; i < 3; i++)
+		{
+			if(tic[i][0] == 1 && tic[i][1] == 1 && tic[i][2] == 1)
+			{
+				return 1;
+			}
+			if(tic[i][0] == 2 && tic[i][1] == 2 && tic[i][2] == 2)
+			{
+				return 2;
+			}
+		}
+		for(int i = 0; i < 3; i++)
+		{
+			if(tic[0][i] == 2 && tic[1][i] == 2 && tic[2][i] == 2)
+			{
+				return 2;
+			}
+			if(tic[0][i] == 1 && tic[1][i] == 1 && tic[2][i] == 1)
+			{
+				return 1;
+			}
+		}
+		if(tic[0][0] == 1 && tic[1][1] == 1 && tic[2][2] == 1)
+			return 1;
+		if(tic[0][0] == 2 && tic[1][1] == 2 && tic[2][2] == 2)
+			return 2;
+		if(tic[0][2] == 1 && tic[1][1] == 1 && tic[2][0] == 1)
+			return 1;
+		if(tic[0][2] == 2 && tic[1][1] == 2 && tic[2][0] == 2)
+			return 2;
 		
 		
 		
@@ -39,7 +68,8 @@ public static int[][] ticbox;
 		//if all checks passed return true.
 		
 		
-		//Write your code here !!!
+		if((a1 > -1 && a1 < 3 && a2 > -1 && a2 < 3) && tic[a1][a2] == 0)
+			return true;
 		
 		
 		return false;
